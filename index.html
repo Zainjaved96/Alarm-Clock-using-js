@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alarm Clock </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="alarm-container container">
+        <div class="card clock-card" style="width: 38rem;">
+            <div class="card-body">
+              <h5 class="card-title text-center" >Alarm Clock </h5>
+              <p class="clock text-center" id="clock">Clock</p>
+              <h5>Set an Alarm</h5>
+              <form>
+                 <select class="form-select hour-select me-2" id="hour-select" aria-label="Default select example">
+                        <option  selected hidden>Hour</option>
+                  </select>
+                  <select class="form-select minute-select me-2" id="minute-select" aria-label="Default select example">
+                    <option  selected hidden>Minutes</option>
+                  </select>
+                  <select class="form-select minute-select me-2" id="tod-select" aria-label="Default select example">
+                    <option  selected>AM</option>
+                    <option  >PM</option>
+                  </select>
+              </form>
+
+              <div class="ringtone mt-2">
+                <select class="form-control" id="ringtone-select" name="" id="">
+                    <option value="" hidden selected>Set Alarm Ringtone</option>
+                    <option value="Default">Default</option>
+                    <option value="Gangsta">Gangsta</option>
+                </select>
+              </div>
+
+              <p class="text-danger text-center fw-bold mt-1 warning" id="warning">Please set a Valid Time!</p>
+              <div class="btn-container container text-center mt-4">
+                <button class="btn btn-primary" onclick="setAlarm()">Set Alarm</button>
+                <button class="btn btn-danger" onclick="deleteAlarm()">Delete Alarm</button>
+             </div>
+             <div class="alarms text-center" id="alarms" > 
+                <p id="alarm-para"></p>
+                <button class="off-btn btn btn-danger text-center" id="off-btn" onclick="alarmOff()">Turn Off</button> 
+            </div>           
+            </div>
+          </div>
+    </div>
+  </body>
+</html>

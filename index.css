@@ -1,0 +1,41 @@
+.alarm-container {
+    background-color: aquamarine;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.clock-card {
+    height: 80vh;
+}
+
+
+.clock {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+}
+
+
+.warning {
+    visibility: hidden;
+}
+
+.warning-active{
+    visibility: visible;
+}
+
+
+.off-btn {
+    visibility: hidden;
+}
+
+.off-btn-active {
+    visibility: visible;
+}
