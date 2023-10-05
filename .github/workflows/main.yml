@@ -1,0 +1,22 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Deploy to FTP
+        uses: airvzxf/ftp-deployment-action@latest
+        with:
+          server: ${{ secrets.FTP_SECRET_HOSTNAME }}
+          user: ${{ secrets.FTP_SECRET_USERNAME }}
+          password: ${{ secrets.FTP_SECRET_PASSWORD }}
+          local_dir: ./public_html
+          remote_dir: /www/user/home
+          remote_dir: /www/user/home
