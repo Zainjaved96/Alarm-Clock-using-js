@@ -17,5 +17,5 @@ jobs:
           server: ${{ secrets.FTP_SECRET_HOSTNAME }}
           user: ${{ secrets.FTP_SECRET_USERNAME }}
           password: ${{ secrets.FTP_SECRET_PASSWORD }}
-          local_dir: /home/vol10_6/infinityfree.com/if0_35160145
+          local_dir: /htdocs/
           
