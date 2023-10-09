@@ -112,7 +112,6 @@ function alarmRing(){
     
 }
 
-
 function deleteAlarm(){
     if (alarmSet){
         alarmSet = false
