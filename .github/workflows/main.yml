@@ -1,6 +1,6 @@
 on: push
 
-name: 🚀 Deploy website on push
+name: 🚀 Deploy on push
 
 jobs:
   web-deploy:
