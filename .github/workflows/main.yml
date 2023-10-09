@@ -13,6 +13,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             # Navigate to the specified directory
             cd www/frp.ititans.com/public_html
