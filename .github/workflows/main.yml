@@ -1,21 +1,21 @@
-name: Deploy to FTP
-
-on:
-  push:
-    branches: [ master ]
-
+name: remote ssh command
+on: [push]
 jobs:
-  deploy:
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Deploy to FTP
-        uses: airvzxf/ftp-deployment-action@latest
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
         with:
-          server: ${{ secrets.FTP_SECRET_HOSTNAME }}
-          user: ${{ secrets.FTP_SECRET_USERNAME }}
-          password: ${{ secrets.FTP_SECRET_PASSWORD }}
-          local_dir: /
-          
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            # Navigate to the specified directory
+            cd www/frp.ititans.com/public_html
+            
+            # Run the git pull command
+            git pull origin master
